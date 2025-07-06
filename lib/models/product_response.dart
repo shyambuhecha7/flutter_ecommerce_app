@@ -17,6 +17,7 @@ class ProductResponse {
     required this.images,
     required this.creationAt,
     required this.updatedAt,
+    this.isFav,
   });
 
   final int? id;
@@ -28,6 +29,8 @@ class ProductResponse {
   final List<String> images;
   final DateTime? creationAt;
   final DateTime? updatedAt;
+  bool?
+  isFav = false;
 
   factory ProductResponse.fromJson(Map<String, dynamic> json){
     return ProductResponse(
@@ -40,6 +43,7 @@ class ProductResponse {
       images: json["images"] == null ? [] : List<String>.from(json["images"]!.map((x) => x)),
       creationAt: DateTime.tryParse(json["creationAt"] ?? ""),
       updatedAt: DateTime.tryParse(json["updatedAt"] ?? ""),
+      isFav: false
     );
   }
 

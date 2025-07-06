@@ -158,7 +158,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Container(
-                                  height: 50,
+                                  height: 45,
                                   decoration: BoxDecoration(
                                     color: Colors.grey[100],
                                     borderRadius: BorderRadius.circular(24),
@@ -173,6 +173,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                       spacing: 8,
                                       children: [
                                         IconButton(
+                                          constraints: BoxConstraints(),
                                           style: ButtonStyle(
                                             backgroundColor:
                                                 WidgetStateProperty.all(
@@ -192,6 +193,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                               AppTextStyle.titleMediumTextStyle,
                                         ),
                                         IconButton(
+                                          constraints: BoxConstraints(),
                                           style: ButtonStyle(
                                             backgroundColor:
                                                 WidgetStateProperty.all(
